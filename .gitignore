@@ -1,3 +1,5 @@
 *.o
 zork
 .a0proj/
+*.exe
+*.zip

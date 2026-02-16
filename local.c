@@ -1,4 +1,6 @@
+#ifndef _WIN32
 #include <unistd.h>
+#endif
 /* local.c -- dungeon functions which need local definition */
 
 #include "funcs.h"
