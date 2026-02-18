@@ -45,6 +45,8 @@ The following improvements were made to the original 1991 C port:
 ## Attribution
 **This project was updated and modernized by a non-programmer using [Agent Zero](https://github.com/frdel/agent-zero).**
 
+![Eat Pray Love](eat-pray-love.jpg)
+
 ---
 
 ```
