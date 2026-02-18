@@ -11,6 +11,8 @@ This repository contains the source code for the original Zork I (Dungeon) game,
 4.  Launch **Zork** from your Desktop or Start Menu.
 
 ### macOS & Linux
+
+**Prerequisites:**\n*   **Linux**: Requires `build-essential` and `libncurses-dev` (Debian/Ubuntu) or `ncurses-devel` (Fedora).\n    ```bash\n    sudo apt install build-essential libncurses-dev\n    ```\n*   **macOS**: Requires Xcode Command Line Tools (`xcode-select --install`).\n
 1.  Clone this repository:
     ```bash
     git clone https://github.com/jake9696/zork.git
