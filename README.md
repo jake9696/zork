@@ -23,6 +23,8 @@ This repository contains the source code for the original Zork I (Dungeon) game,
     ./build.sh
     ```
 3.  Run the game:
+
+    **Note:** The `dtextc.dat` file must be in the same directory as the executable for the game to run.
     ```bash
     ./zork
     ```
