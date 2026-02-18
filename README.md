@@ -12,7 +12,14 @@ This repository contains the source code for the original Zork I (Dungeon) game,
 
 ### macOS & Linux
 
-**Prerequisites:**\n*   **Linux**: Requires `build-essential` and `libncurses-dev` (Debian/Ubuntu) or `ncurses-devel` (Fedora).\n    ```bash\n    sudo apt install build-essential libncurses-dev\n    ```\n*   **macOS**: Requires Xcode Command Line Tools (`xcode-select --install`).\n
+**Prerequisites:**
+*   **Linux**: Requires `build-essential` and `libncurses-dev` (Debian/Ubuntu) or `ncurses-devel` (Fedora).
+    ```bash
+    sudo apt install build-essential libncurses-dev
+    ```
+*   **macOS**: Requires Xcode Command Line Tools (`xcode-select --install`).
+
+**Installation:**
 1.  Clone this repository:
     ```bash
     git clone https://github.com/jake9696/zork.git
@@ -23,7 +30,6 @@ This repository contains the source code for the original Zork I (Dungeon) game,
     ./build.sh
     ```
 3.  Run the game:
-
     **Note:** The `dtextc.dat` file must be in the same directory as the executable for the game to run.
     ```bash
     ./zork
@@ -42,7 +48,7 @@ The following improvements were made to the original 1991 C port:
 ---
 
 ```
-Welcome to Dungeon.			This version created 11-MAR-91.
+Welcome to Dungeon.This version created 11-MAR-91.
 You are in an open field west of a big white house with a boarded
 front door.
 There is a small mailbox here.
@@ -50,7 +56,7 @@ There is a small mailbox here.
 ```
 # DUNGEON (Zork I)
 
-Public Domain source code to the original DUNGEON game (Zork I). Released to the PD by Infocom. Includes 
+Public Domain source code to the original DUNGEON game (Zork I). Released to the PD by Infocom. Includes
 source files, headers, and information.
 
 ```
@@ -75,7 +81,7 @@ Subj: Game Information
 Date: 8-OCT-80
 
 
-This is the first (and last) source release of the PDP-11 version of 
+This is the first (and last) source release of the PDP-11 version of
 Dungeon.
 
 Please note that Dungeon has been superceded by the game ZORK(tm).
@@ -169,4 +175,3 @@ to remove the FORTRAN I/O library, to add simple more processing, and
 to change the format of the database file.  Andre Srinivasan
 (andre@cs.pitt.edu) help test it.  Jonathan Mark
 (uunet!microsoft!jonm) made it work under MS-DOS and Microsoft C.
-
