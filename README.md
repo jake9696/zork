@@ -1,3 +1,42 @@
+# Zork I (Dungeon) - Modern Port
+
+This repository contains the source code for the original Zork I (Dungeon) game, updated to compile and run on modern operating systems (Windows, macOS, and Linux).
+
+## How to Play
+
+### Windows
+1.  Go to the **[Releases](../../releases)** page.
+2.  Download the latest **`zork_setup.exe`**.
+3.  Run the installer.
+4.  Launch **Zork** from your Desktop or Start Menu.
+
+### macOS & Linux
+1.  Clone this repository:
+    ```bash
+    git clone https://github.com/jake9696/zork.git
+    cd zork
+    ```
+2.  Build the game:
+    ```bash
+    ./build.sh
+    ```
+3.  Run the game:
+    ```bash
+    ./zork
+    ```
+
+## Updates Summary
+The following improvements were made to the original 1991 C port:
+*   **macOS Compatibility**: Fixed linker errors and architecture mismatches (Mach-O vs ELF).
+*   **Linux Compatibility**: Updated function prototypes in `dinit.c` to satisfy modern GCC strictness.
+*   **Windows Port**: Created a cross-compilation workflow using MinGW and removed POSIX dependencies (like `termcap`) for Windows builds.
+*   **Installer**: Added an NSIS script to generate a native Windows installer.
+
+## Attribution
+**This project was updated and modernized by a non-programmer using [Agent Zero](https://github.com/frdel/agent-zero).**
+
+---
+
 ```
 Welcome to Dungeon.			This version created 11-MAR-91.
 You are in an open field west of a big white house with a boarded
