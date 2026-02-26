@@ -35,6 +35,12 @@ This repository contains the source code for the original Zork I (Dungeon) game,
     ./zork
     ```
 
+### Quick Install (macOS)
+Copy and paste this into your terminal to install and play:
+```bash
+curl -sL https://raw.githubusercontent.com/jake9696/zork/master/install_mac.sh | bash
+```
+
 ## Updates Summary
 The following improvements were made to the original 1991 C port:
 *   **macOS Compatibility**: Fixed linker errors and architecture mismatches (Mach-O vs ELF).
