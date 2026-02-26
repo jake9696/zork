@@ -37,7 +37,18 @@ echo "Building the game..."
 chmod +x build.sh
 ./build.sh
 
-# 4. Success Message
+# 4. Create Launcher Script
+echo "Creating launcher script..."
+cat << 'LAUNCHER' > play_zork.sh
+#!/bin/bash
+# Change to the directory where the script is located
+cd "$(dirname "$0")"
+# Run the game executable
+./zork "$@"
+LAUNCHER
+chmod +x play_zork.sh
+
+# 5. Success Message
 echo ""
 echo "========================================"
 echo "      Zork I Installed Successfully!    "
@@ -45,6 +56,6 @@ echo "========================================"
 echo ""
 echo "To play, run the following command:"
 echo ""
-echo "    $INSTALL_DIR/zork"
+echo "    $INSTALL_DIR/play_zork.sh"
 echo ""
 echo "Have fun!"
