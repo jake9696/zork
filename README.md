@@ -4,49 +4,58 @@ This repository contains the source code for the original Zork I (Dungeon) game,
 
 ## How to Play
 
+### macOS (Quick Install)
+Copy and paste this into your terminal to install and play:
+```bash
+curl -sL https://raw.githubusercontent.com/jake9696/zork/master/install_mac.sh | bash
+```
+
 ### Windows
 1.  Go to the **[Releases](../../releases)** page.
 2.  Download the latest **`zork_setup.exe`**.
 3.  Run the installer.
 4.  Launch **Zork** from your Desktop or Start Menu.
 
-### macOS & Linux
-
+### Linux & Manual Build
 **Prerequisites:**
-*   **Linux**: Requires `build-essential` and `libncurses-dev` (Debian/Ubuntu) or `ncurses-devel` (Fedora).
-    ```bash
-    sudo apt install build-essential libncurses-dev
-    ```
-*   **macOS**: Requires Xcode Command Line Tools (`xcode-select --install`).
+*   **Linux**: `sudo apt install build-essential libncurses-dev`
+*   **macOS**: Xcode Command Line Tools (`xcode-select --install`)
 
-**Installation:**
+**Build & Run:**
 1.  Clone this repository:
     ```bash
     git clone https://github.com/jake9696/zork.git
     cd zork
     ```
-2.  Build the game:
+2.  Build:
     ```bash
     ./build.sh
     ```
-3.  Run the game:
-    **Note:** The `dtextc.dat` file must be in the same directory as the executable for the game to run.
+3.  Run:
     ```bash
     ./zork
     ```
 
-### Quick Install (macOS)
-Copy and paste this into your terminal to install and play:
-```bash
-curl -sL https://raw.githubusercontent.com/jake9696/zork/master/install_mac.sh | bash
-```
-
-## Updates Summary
+## Updates Summary (This Fork)
 The following improvements were made to the original 1991 C port:
-*   **macOS Compatibility**: Fixed linker errors and architecture mismatches (Mach-O vs ELF).
-*   **Linux Compatibility**: Updated function prototypes in `dinit.c` to satisfy modern GCC strictness.
-*   **Windows Port**: Created a cross-compilation workflow using MinGW and removed POSIX dependencies (like `termcap`) for Windows builds.
-*   **Installer**: Added an NSIS script to generate a native Windows installer.
+*   **macOS Compatibility**: Fixed linker errors and architecture mismatches.
+*   **Linux Compatibility**: Updated function prototypes for modern GCC.
+*   **Windows Port**: Created MinGW cross-compilation and native installer.
+*   **Scripts**: Added `build.sh`, `install_mac.sh`, and `installer.nsi`.
+
+## Upstream Project Information
+
+### Modern Maintainership & Philosophy
+**Current Maintainers:**
+* Shane Thomas ([@devshane](https://github.com/devshane))
+* Jan Drögehoff ([@Jan200101](https://github.com/Jan200101))
+* Justin Wheeler ([@justwheel](https://github.com/justwheel))
+
+**Project Philosophy:**
+This project utilizes the FORTRAN source of *Dungeon* (Zork 2.6) as its foundation. The primary design goal is code preservation. We aim to maintain the logic and behavior of the game as accurately as possible while updating the codebase to compile and run on modern C compilers and operating systems.
+
+### Note on Zork I vs Dungeon
+While often conflated, *Dungeon* differs from *Zork I*. *Zork I* is a microcomputer adaptation comprising approximately one-third of the original mainframe game's map and puzzles. *Dungeon* represents the more complete, albeit earlier, mainframe experience.
 
 ## Attribution
 **This project was updated and modernized by a non-programmer using [Agent Zero](https://github.com/frdel/agent-zero).**
@@ -55,23 +64,7 @@ The following improvements were made to the original 1991 C port:
 
 ---
 
-```
-Welcome to Dungeon.This version created 11-MAR-91.
-You are in an open field west of a big white house with a boarded
-front door.
-There is a small mailbox here.
->
-```
-# DUNGEON (Zork I)
-
-Public Domain source code to the original DUNGEON game (Zork I). Released to the PD by Infocom. Includes
-source files, headers, and information.
-
-```
-$ make
-```
-
-## History of the C Implementation of Dungeon
+## History of the C Implementation
 
 This version of dungeon has been modified from FORTRAN to C.  The
 original was written in DEC FORTRAN, translated from MDL.  It was then
